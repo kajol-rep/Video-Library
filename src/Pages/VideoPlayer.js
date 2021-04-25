@@ -53,7 +53,7 @@ export function VideoPlayer() {
             <div className="flex">
               <MdThumbUp
                 color={
-                  CheckIfVideoExistsInList(likedVideos, videoInfo.id)
+                  CheckIfVideoExistsInList(likedVideos, videoInfo?.id)
                     ? "#2563eb"
                     : "grey"
                 }
@@ -68,7 +68,7 @@ export function VideoPlayer() {
               <div className="padding-half"></div>
               <MdWatchLater
                 color={
-                  CheckIfVideoExistsInList(watchLater, videoInfo.id)
+                  CheckIfVideoExistsInList(watchLater, videoInfo?.id)
                     ? "#2563eb"
                     : "grey"
                 }
@@ -80,7 +80,7 @@ export function VideoPlayer() {
               <MdPlaylistAdd
                 color="grey"
                 size="1.5rem"
-                onClick={() => handlePlaylist(videoInfo.id)}
+                onClick={() => handlePlaylist(videoInfo?.id)}
               />
             </div>
           </div>
