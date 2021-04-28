@@ -1,11 +1,11 @@
 import React from "react";
 
 export function Avatar({ src, size, alt, children, color, variant }) {
-  let fSize = 20;
+  let fontSize = 20;
   if (size) {
-    fSize = size.split(`px`);
+    fontSize = size.split(`px`);
   } else {
-    fSize = 20;
+    fontSize = 20;
   }
 
   return (
@@ -31,7 +31,7 @@ export function Avatar({ src, size, alt, children, color, variant }) {
       {children && (
         <span
           className="txt-style"
-          style={{ fontSize: size ? fSize[0] / 2 : fSize }}
+          style={{ fontSize: size ? fontSize[0] / 2 : fontSize }}
         >
           {children}
         </span>
