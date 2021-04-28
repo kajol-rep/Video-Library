@@ -29,7 +29,7 @@ export default function App() {
         localStorage.setItem("data", JSON.stringify(response.data.videos));
         const data = JSON.parse(localStorage?.getItem("data"));
         if (response.status === 200) {
-          dispatch({ type: "FETCH_DATA_TO_VIDEOS", payload: data });
+          dispatch({ type: "FETCH_VIDEOS", payload: data });
         }
       } catch (error) {}
     })();

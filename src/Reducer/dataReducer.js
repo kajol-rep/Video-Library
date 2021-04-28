@@ -5,7 +5,7 @@ import {
 
 export const dataReducer = (state, action) => {
   switch (action.type) {
-    case "FETCH_DATA_TO_VIDEOS":
+    case "FETCH_VIDEOS":
       return {
         ...state,
         videos: action.payload
