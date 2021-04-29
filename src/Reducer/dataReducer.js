@@ -123,15 +123,6 @@ export const dataReducer = (state, action) => {
         )
       };
 
-    case "RENAME_PLAYLIST":
-      return {
-        ...state,
-        playlist: state.playlist.map((playlist) =>
-          playlist.playlistId === action.payload.playlistId
-            ? { ...playlist, playlistName: action.payload.playlistName }
-            : playlist
-        )
-      };
     case "OPEN_SNACKBAR":
       return {
         ...state,

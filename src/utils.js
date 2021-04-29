@@ -5,8 +5,7 @@ export const checkIfVideoIsAddedToPlaylist = (list, videoid) =>
   list.some((id) => id === videoid);
 
 export const videoURL = (id) => `https://www.youtube.com/watch?v=${id}`;
-export const thumbnailURL = (id) =>
-  `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
 
 export const iconSize = "1.5rem";
 
