@@ -7,13 +7,14 @@ import {
   MdPlaylistPlay
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { iconSize } from "../utils";
 export function SideBar() {
   return (
     <div style={{ width: "250px" }} className="position-absolute">
       <div style={{ fontSize: "1.4rem" }} className="flex-column">
         <div className="">
           <Link className="flex link-btn list-item-padding list-item" to="/">
-            <MdHome size="1.5rem" />
+            <MdHome size={iconSize} />
             <div className="padding-one"></div>
             <span>Home</span>
           </Link>
@@ -24,7 +25,7 @@ export function SideBar() {
             to="/history"
             className="link-btn flex list-item-padding list-item"
           >
-            <MdHistory size="1.5rem" />
+            <MdHistory size={iconSize} />
             <div className="padding-one"></div>
             <span>History</span>
           </Link>
@@ -32,7 +33,7 @@ export function SideBar() {
             to="/watchlater"
             className="link-btn flex list-item-padding list-item"
           >
-            <MdWatchLater size="1.5rem" />
+            <MdWatchLater size={iconSize} />
             <div className="padding-one"></div>
             <span>Watch Later</span>
           </Link>
@@ -40,7 +41,7 @@ export function SideBar() {
             to="/playList"
             className="link-btn flex list-item-padding list-item"
           >
-            <MdPlaylistPlay size="1.5rem" />
+            <MdPlaylistPlay size={iconSize} />
             <div className="padding-one"></div>
             <span>Play Lists</span>
           </Link>
@@ -48,7 +49,7 @@ export function SideBar() {
             to="/likedVideos"
             className="link-btn flex list-item-padding list-item"
           >
-            <MdThumbUp size="1.5rem" />
+            <MdThumbUp size={iconSize} />
             <div className="padding-one"></div>
             <span>Liked Videos</span>
           </Link>

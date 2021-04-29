@@ -8,6 +8,8 @@ export const videoURL = (id) => `https://www.youtube.com/watch?v=${id}`;
 export const thumbnailURL = (id) =>
   `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
+export const iconSize = "1.5rem";
+
 export const formatString = (value) => {
   const str = value;
   return str.length > 54 ? str.substr(0, 54) + "..." : str.substr(0, 54);

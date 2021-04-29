@@ -7,6 +7,7 @@ import {
   MdPlaylistPlay
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { iconSize } from "../utils";
 export function BottomBar() {
   return (
     <div className="mobile-mode">
@@ -15,20 +16,20 @@ export function BottomBar() {
         className="bottom-bar flex"
       >
         <Link className="link-btn" to="/">
-          <MdHome size="1.5rem" />
+          <MdHome size={iconSize} />
         </Link>
 
         <Link className="link-btn" to="/history">
-          <MdHistory size="1.5rem" />
+          <MdHistory size={iconSize} />
         </Link>
         <Link className="link-btn" to="/watchlater">
-          <MdWatchLater size="1.5rem" />
+          <MdWatchLater size={iconSize} />
         </Link>
         <Link className="link-btn" to="/playList">
-          <MdPlaylistPlay size="1.5rem" />
+          <MdPlaylistPlay size={iconSize} />
         </Link>
         <Link className="link-btn" to="/likedVideos">
-          <MdThumbUp size="1.5rem" />
+          <MdThumbUp size={iconSize} />
         </Link>
       </div>
     </div>

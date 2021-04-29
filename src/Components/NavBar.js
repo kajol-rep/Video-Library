@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-
 import { HiUserCircle, HiSearch } from "react-icons/hi";
 import { useData } from "../Context/DataProvider";
 export function NavBar() {
