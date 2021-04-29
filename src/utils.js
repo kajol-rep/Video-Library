@@ -1,4 +1,4 @@
-export const CheckIfVideoExistsInList = (list, videoid) =>
+export const checkIfVideoExistsInList = (list, videoid) =>
   list.some(({ id }) => id === videoid);
 
 export const checkIfVideoIsAddedToPlaylist = (list, videoid) =>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useData } from "../Context/DataProvider";
 import {
-  CheckIfVideoExistsInList,
+  checkIfVideoExistsInList,
   formatDate,
   formatNumber,
   formatString
@@ -58,7 +58,7 @@ export function LikedVideos() {
                       <div className="tooltip pointer">
                         <HiDotsVertical size="1rem" color="grey" />
                         <div className="grey tooltiptext card-shadow light-border">
-                          {!CheckIfVideoExistsInList(watchLater, video.id) ? (
+                          {!checkIfVideoExistsInList(watchLater, video.id) ? (
                             <div
                               className="flex padding-bottom link-btn list-item-padding list-item"
                               onClick={() => addToWatchLater(video)}

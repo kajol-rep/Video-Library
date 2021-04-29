@@ -1,5 +1,5 @@
 import {
-  CheckIfVideoExistsInList,
+  checkIfVideoExistsInList,
   checkIfVideoIsAddedToPlaylist
 } from "../utils";
 
@@ -33,7 +33,7 @@ export const dataReducer = (state, action) => {
     case "ADD_TO_LIKED_VIDEOS":
       return {
         ...state,
-        likedVideos: CheckIfVideoExistsInList(
+        likedVideos: checkIfVideoExistsInList(
           state.likedVideos,
           action.payload.id
         )

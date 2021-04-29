@@ -55,7 +55,7 @@ export default function App() {
           </div>
         </div>
         {openModal === "create-playList" && (
-          <Modal open={openModal} onclose={handleClose} dismissable>
+          <Modal open={openModal} onClose={handleClose} dismissable>
             <CreatePlayList />
           </Modal>
         )}

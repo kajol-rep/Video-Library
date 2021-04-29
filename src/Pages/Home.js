@@ -1,7 +1,7 @@
 import React from "react";
 import { useData } from "../Context/DataProvider";
 import {
-  CheckIfVideoExistsInList,
+  checkIfVideoExistsInList,
   formatDate,
   formatNumber,
   formatString
@@ -17,14 +17,14 @@ export function Home() {
     addToWatchLater,
     handlePlaylist
   } = useData();
-  function getfilteredData() {
+  function getFilteredData() {
     if (searchedItems.length === 0) {
       return videos;
     }
     return searchedItems;
   }
 
-  const filteredVideos = getfilteredData();
+  const filteredVideos = getFilteredData();
   return (
     <div>
       <div className="flex flex-gap flex-justify-center flex-wrap">
@@ -66,7 +66,7 @@ export function Home() {
                       style={{ color: "grey" }}
                       className="tooltiptext card-shadow light-border"
                     >
-                      {!CheckIfVideoExistsInList(watchLater, video.id) ? (
+                      {!checkIfVideoExistsInList(watchLater, video.id) ? (
                         <div
                           className="flex padding-bottom link-btn list-item-padding list-item"
                           onClick={() => addToWatchLater(video)}
