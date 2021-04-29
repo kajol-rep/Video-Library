@@ -10,7 +10,6 @@ import { Avatar } from "../Components/Avatar";
 import { Link } from "react-router-dom";
 import { HiDotsVertical } from "react-icons/hi";
 import { MdWatchLater, MdPlaylistAdd, MdRemoveCircle } from "react-icons/md";
-
 export function Home() {
   const {
     state: { videos, watchLater, searchedItems },
@@ -33,8 +32,7 @@ export function Home() {
           <div key={video.id} className="vertical-card video-card ">
             <Link
               to={`/video/${video.id}`}
-              className="link-btn light-background"
-              style={{ height: "200px" }}
+              className="basic-height link-btn light-background"
               onClick={() => addToHistory(video)}
             >
               <img
@@ -53,12 +51,11 @@ export function Home() {
                 <Avatar alt="avatar" src={video.image} size="40px" />
               </Link>
 
-              <div style={{ paddingLeft: "10px" }}>
+              <div className="padding-left">
                 <div className="flex">
                   <Link
                     to={`/video/${video.id}`}
-                    style={{ width: "230px" }}
-                    className="bold-text link-btn"
+                    className="playlist-card bold-text link-btn"
                     onClick={() => addToHistory(video)}
                   >
                     {formatString(video.title)}

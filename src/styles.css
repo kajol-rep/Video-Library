@@ -35,6 +35,9 @@ hr {
 .grey {
   color: grey;
 }
+.black {
+  color: black;
+}
 .pointer {
   cursor: pointer;
 }
@@ -78,6 +81,9 @@ hr {
 }
 .space-between {
   justify-content: space-between;
+}
+.space-even {
+  justify-content: space-evenly;
 }
 .flex-column {
   display: flex;

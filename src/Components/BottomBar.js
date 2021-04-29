@@ -11,10 +11,7 @@ import { iconSize } from "../utils";
 export function BottomBar() {
   return (
     <div className="mobile-mode">
-      <div
-        style={{ justifyContent: "space-evenly" }}
-        className="bottom-bar flex"
-      >
+      <div className="bottom-bar flex space-even">
         <Link className="link-btn" to="/">
           <MdHome size={iconSize} />
         </Link>

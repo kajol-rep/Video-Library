@@ -88,7 +88,7 @@ export function VideoPlayer() {
         <hr />
         <div className="video-card-content padding-half grid-justify-start">
           <Avatar alt="avatar" src={videoInfo?.image} />
-          <div style={{ paddingLeft: "10px" }} className="padding-top">
+          <div className="padding-top padding-left">
             <div>{videoInfo?.author}</div>
             <div className="grey-text">
               {formatNumber(videoInfo?.subscribers)} subscribers

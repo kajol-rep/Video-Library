@@ -46,7 +46,7 @@ export function LikedVideos() {
                 </Link>
 
                 <div className="width-full">
-                  <div style={{ paddingLeft: "10px" }}>
+                  <div className="padding-left">
                     <div className="flex space-between">
                       <Link
                         className="bold-text link-btn"
@@ -57,10 +57,7 @@ export function LikedVideos() {
                       </Link>
                       <div className="tooltip pointer">
                         <HiDotsVertical size="1rem" color="grey" />
-                        <div
-                          style={{ color: "grey" }}
-                          className="tooltiptext card-shadow light-border"
-                        >
+                        <div className="grey tooltiptext card-shadow light-border">
                           {!CheckIfVideoExistsInList(watchLater, video.id) ? (
                             <div
                               className="flex padding-bottom link-btn list-item-padding list-item"

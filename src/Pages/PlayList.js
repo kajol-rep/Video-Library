@@ -1,7 +1,6 @@
 import React from "react";
 import { PlaylistCard } from "../Components/PlaylistCard";
 import { useData } from "../Context/DataProvider";
-
 export function PlayList() {
   const {
     state: { playlist },

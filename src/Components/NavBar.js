@@ -48,13 +48,11 @@ export function NavBar() {
             className="width-full"
           ></input>
         </div>
-        <div className="">
-          <Link className="link-btn" to="/" onClick={() => searchItems()}>
-            <button className="mobile-search-btn simple-btn">
-              <HiSearch />
-            </button>
-          </Link>
-        </div>
+        <Link className="link-btn" to="/" onClick={() => searchItems()}>
+          <button className="mobile-search-btn simple-btn">
+            <HiSearch />
+          </button>
+        </Link>
       </div>
     </nav>
   );
