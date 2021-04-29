@@ -34,18 +34,14 @@ export function PlaylistCard({ videoId, playlistId }) {
     <div>
       {!video.length > 0 ? (
         <div>
-          <div
-            style={{ width: "230px" }}
-            key={video.id}
-            className=" vertical-card link-btn"
-          >
+          <div key={video.id} className="playlist-card vertical-card link-btn">
             <Link
               to={`/video/${video.id}`}
               className="link-btn"
               onClick={() => addToHistory(video)}
             >
               <img
-                style={{ width: "230px" }}
+                className="playlist-card"
                 alt="thumbnail"
                 src={video.thumbnail}
               />

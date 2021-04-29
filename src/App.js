@@ -39,7 +39,7 @@ export default function App() {
       <NavBar />
       <div className="margin-top padding-top">
         <div className="grid grid-column-2">
-          <div style={{ width: "250px" }} className="seperator desktop-mode">
+          <div className="seperator desktop-mode basic-width">
             <SideBar />
           </div>
           <div className="padding-one-desktop-mode">

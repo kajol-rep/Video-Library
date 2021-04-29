@@ -66,7 +66,7 @@ export function CreatePlayList() {
           className="padding-top pointer flex-row bold-text"
           onClick={() => setCreatePlaylist(true)}
         >
-          <span style={{ fontSize: "1.5rem" }}>+</span> Create playlist
+          <span className="medium-text">+</span> Create playlist
         </div>
       )}
     </div>

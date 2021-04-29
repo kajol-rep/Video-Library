@@ -313,6 +313,18 @@ hr {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+.basic-width {
+  width: 250px;
+}
+.basic-height {
+  height: 200px;
+}
+.sideBar-font {
+  font-size: 1.4rem;
+}
+.playlist-card {
+  width: 230px;
+}
 .snackbar {
   background-color: #374151;
   color: white;

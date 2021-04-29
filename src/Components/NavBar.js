@@ -15,12 +15,7 @@ export function NavBar() {
       <div className=" flex-row flex-gap">
         <Link className="nav-header link-btn" to="/">
           <img alt="logo" className="logo" src={logo} />
-          <span
-            className="logo-text padding-left"
-            style={{ fontSize: "1.5rem" }}
-          >
-            PetHub
-          </span>
+          <span className="logo-text padding-left medium-text">PetHub</span>
         </Link>
         <div className="flex-row flex-grow-one">
           <div className="search-bar">

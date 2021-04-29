@@ -52,7 +52,7 @@ export function History() {
                 </Link>
 
                 <div className="width-full">
-                  <div style={{ paddingLeft: "10px" }}>
+                  <div className="padding-left">
                     <div className="flex space-between">
                       <Link
                         className="bold-text link-btn"
