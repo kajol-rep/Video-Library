@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { useData } from "../Context/DataProvider";
 import {
-  CheckIfVideoExistsInList,
+  checkIfVideoExistsInList,
   formatDate,
   formatNumber,
   formatString,
@@ -53,7 +53,7 @@ export function VideoPlayer() {
             <div className="flex">
               <MdThumbUp
                 color={
-                  CheckIfVideoExistsInList(likedVideos, videoInfo?.id)
+                  checkIfVideoExistsInList(likedVideos, videoInfo?.id)
                     ? "#2563eb"
                     : "grey"
                 }
@@ -68,7 +68,7 @@ export function VideoPlayer() {
               <div className="padding-half"></div>
               <MdWatchLater
                 color={
-                  CheckIfVideoExistsInList(watchLater, videoInfo?.id)
+                  checkIfVideoExistsInList(watchLater, videoInfo?.id)
                     ? "#2563eb"
                     : "grey"
                 }
@@ -135,7 +135,7 @@ export function VideoPlayer() {
                       style={{ color: "grey" }}
                       className="tooltiptext card-shadow light-border"
                     >
-                      {!CheckIfVideoExistsInList(watchLater, video.id) ? (
+                      {!checkIfVideoExistsInList(watchLater, video.id) ? (
                         <div
                           className="flex padding-bottom link-btn list-item-padding list-item"
                           onClick={() => addToWatchLater(video)}

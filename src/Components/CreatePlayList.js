@@ -3,17 +3,17 @@ import { useData } from "../Context/DataProvider";
 import { checkIfVideoIsAddedToPlaylist } from "../utils";
 export function CreatePlayList() {
   const [playlistName, setPlaylistName] = useState("");
-  const [createPlaylist, setCreatePlaylist] = useState(false);
+  const [displayPlaylist, setDisplayPlaylist] = useState(false);
   const {
     state: { playlist, videoId },
     dispatch
   } = useData();
-  function createPlayList() {
+  function createPlaylist() {
     setPlaylistName("");
     dispatch({ type: "CREATE_PLAYLIST", payload: playlistName });
-    setCreatePlaylist(false);
+    setDisplayPlaylist(false);
   }
-  function addToPlayList(playlistId) {
+  function addToPlaylist(playlistId) {
     dispatch({ type: "TOGGLE_ADD_TO_PLAYLIST", payload: playlistId });
   }
   return (
@@ -32,7 +32,7 @@ export function CreatePlayList() {
                       playlistVideos,
                       videoId
                     )}
-                    onChange={() => addToPlayList(playlistId)}
+                    onChange={() => addToPlaylist(playlistId)}
                   ></input>
                   {playlistName}
                 </label>
@@ -44,7 +44,7 @@ export function CreatePlayList() {
         )}
       </div>
       <hr />
-      {createPlaylist ? (
+      {displayPlaylist ? (
         <div className="padding-top flex-column">
           <input
             placeholder="name your playlist"
@@ -55,7 +55,7 @@ export function CreatePlayList() {
           />
           <br />
           <span
-            onClick={() => createPlayList()}
+            onClick={() => createPlaylist()}
             className="pointer bold-text flex-row"
           >
             CREATE
@@ -64,7 +64,7 @@ export function CreatePlayList() {
       ) : (
         <div
           className="padding-top pointer flex-row bold-text"
-          onClick={() => setCreatePlaylist(true)}
+          onClick={() => setDisplayPlaylist(true)}
         >
           <span className="medium-text">+</span> Create playlist
         </div>

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useState } from "react";
 import { dataReducer } from "../Reducer/dataReducer";
-import { CheckIfVideoExistsInList } from "../utils";
+import { checkIfVideoExistsInList } from "../utils";
 export const DataContext = createContext();
 export function DataProvider({ children }) {
   const [openModal, setOpenModal] = useState();
@@ -18,7 +18,7 @@ export function DataProvider({ children }) {
     dispatch({ type: "ADD_TO_HISTORY", payload: video });
   }
   function addToWatchLater(video) {
-    if (!CheckIfVideoExistsInList(state.watchLater, video.id)) {
+    if (!checkIfVideoExistsInList(state.watchLater, video.id)) {
       dispatch({ type: "OPEN_SNACKBAR", payload: "Added to watch later !" });
       dispatch({ type: "ADD_TO_WATCH_LATER", payload: video });
     } else {
