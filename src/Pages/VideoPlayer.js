@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { useData } from "../Context/DataProvider";
@@ -27,6 +27,13 @@ export function VideoPlayer() {
     handlePlaylist,
     dispatch
   } = useData();
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, [addToHistory]);
 
   const videoInfo = videos.find((video) => video.id === videoId);
   const filteredVideo = videos.filter((video) => video.id !== videoId);
@@ -120,7 +127,7 @@ export function VideoPlayer() {
             </Link>
 
             <div className="video-card-content">
-              <div style={{ paddingLeft: "10px" }}>
+              <div className="padding-left">
                 <div className="flex">
                   <Link
                     to={`/video/${video.id}`}
@@ -131,10 +138,7 @@ export function VideoPlayer() {
                   </Link>
                   <div className="tooltip pointer">
                     <HiDotsVertical size="1rem" color="grey" />
-                    <div
-                      style={{ color: "grey" }}
-                      className="tooltiptext card-shadow light-border"
-                    >
+                    <div className="tooltiptext grey card-shadow light-border">
                       {!checkIfVideoExistsInList(watchLater, video.id) ? (
                         <div
                           className="flex padding-bottom link-btn list-item-padding list-item"

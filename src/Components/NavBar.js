@@ -5,7 +5,7 @@ import { HiUserCircle, HiSearch } from "react-icons/hi";
 import { useData } from "../Context/DataProvider";
 export function NavBar() {
   const { dispatch } = useData();
-  const [itemToSearch, setItemToSearch] = useState();
+  const [itemToSearch, setItemToSearch] = useState("");
   function searchItems() {
     dispatch({ type: "SEARCH_ITEM", payload: itemToSearch });
     setItemToSearch("");

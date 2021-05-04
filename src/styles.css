@@ -341,3 +341,6 @@ hr {
   border-radius: 2px;
   z-index: 100;
 }
+.selected {
+  background-color: rgb(204, 221, 253);
+}
